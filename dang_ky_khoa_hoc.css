@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.div_all1 {
+  padding-top: 20px;
+  margin: auto;
+  border: 1px solid rgb(85, 175, 254);
+  border-radius: 15px;
+  width: 800px;
+  background-color: rgb(185, 235, 255);
+}
+.div_in_all1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.div_tieuDe {
+  font-size: 30px;
+  font-weight: bold;
+}
+.icon_img {
+  width: 40px;
+  padding: 0 10px;
+}
+.ten_kh {
+  text-decoration: none;
+  color: navy;
+  border: 1px solid rgb(85, 175, 254);
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.ten_kh:hover {
+  color: white;
+  background-color: navy;
+}
+.ten_kh:active {
+  color: white;
+  background-color: navy;
+  font-size: 15px;
+}
+.div_in_all2 {
+  text-align: center;
+}
+.div_in_all3 {
+  display: flex;
+}
+.div_mini {
+  width: 50%;
+  padding-left: 20px;
+}
+.p_thongtin {
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+.inp1 {
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 360px;
+  height: 40px;
+}
+.red {
+  color: red;
+}
+textarea {
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 740px;
+  height: 150px;
+}
+.impotion {
+  width: 100%;
+  margin-top: 20px;
+}
+.ghiChu {
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid rgb(0, 95, 0);
+  border-radius: 20px;
+  background-color: rgb(218, 255, 218);
+}
+.center {
+  justify-content: center;
+  padding-top: 20px;
+}
+.div_mini2 {
+  gap: 20px;
+}
+button {
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin: 10px 15px 20px 15px;
+  cursor: pointer;
+}
+button:hover {
+  color: black;
+  background-color: orange;
+  font-size: 15px;
+}
+button:focus {
+  color: white;
+  background-color: green;
+  font-size: 15px;
+}
+.div_all2 {
+  background-color: white;
+  justify-content: center;
+  margin: auto;
+  width: 98%;
+  border: 1px dotted gray;
+  border-radius: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 0;
+}
+select {
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 365px;
+  height: 43px;
+}
+.thongBao{
+    color: red;
+    font-style: italic;
+}

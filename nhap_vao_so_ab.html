@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập vào số ab</title>
+  </head>
+  <body>
+    <div>
+      <h1>Nhập số a và b:</h1>
+      <h3>Điều kiện: Thực hiện phép tính a^2 + b^2</h3>
+      <div>
+        <p>Số a:</p>
+        <input type="text" id="a" placeholder="Nhập vào số a:" />
+      </div>
+      <div>
+        <p>Số b:</p>
+        <input type="text" id="b" placeholder="Nhập vào số b:" />
+      </div>
+      <div>
+        <p
+          style="font-weight: bold; color: red; font-style: italic"
+          id="thongBao"
+        ></p>
+      </div>
+      <div>
+        <button
+          style="
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: green;
+          "
+          onclick="kiemTra()"
+        >
+          Kiểm tra
+        </button>
+      </div>
+    </div>
+    <script>
+      function kiemTra() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let tb = document.getElementById("thongBao");
+        let dieuKien = Math.pow(a, 2) + Math.pow(b, 2);
+
+        tb.innerHTML = "Kết quả của bạn là " + dieuKien;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập vào nội dung</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hãy hỏi bất cứ câu hỏi gì</h1>
+      <p>Nội dung câu hỏi</p>
+      <textarea
+        id="tt"
+        style="width: 600px; height: 100px"
+        name=""
+        id="noiDung"
+        placeholder="Hãy nhập nội dung cần hỏi ở đây..."
+      ></textarea
+      >
+      <p style="color: red; font-size: 13px; font-style: italic;" id="tT"></p><br />
+      <input
+        style="
+          padding: 10px 15px;
+          background-color: rgb(127, 127, 254);
+          border-radius: 5px;
+        "
+        onclick="submit()"
+        type="submit"
+        name=""
+        id=""
+      />
+      <input
+        style="padding: 10px 15px; border-radius: 5px"
+        type="reset"
+        name=""
+        id=""
+      />
+    </div>
+    <script>
+      function submit() {
+        let tt = document.getElementById("tt").value;
+        let tT = document.getElementById("tT");
+        if (tt.length == 0) {
+            tT.innerHTML = "Bạn phải nhập ít nhất 1 kí tự !";
+            console.log("Bạn phải nhập ít nhất 1 kí tự !");
+        } else {
+            alert("đã gửi !");
+            tT.innerHTML = "Thành công !";
+            console.log("Đã gửi !");
+        }
+      }
+    </script>
+  </body>
+</html>

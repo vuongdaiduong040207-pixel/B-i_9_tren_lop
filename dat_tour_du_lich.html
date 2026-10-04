@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt tour du lịch</title>
+    <link rel="stylesheet" href="dat_tour_du_lich.css" />
+  </head>
+  <body>
+    <div class="div_all">
+      <div class="div_in_hd">
+        <header class="hd">Đặt Tour Du Lịch</header>
+        <p class="gray">
+          Khám phá điểm đến yêu thích và gửi thông tin đặt tour.
+        </p>
+      </div>
+      <div class="div_in_img">
+        <section>
+          <img
+            class="img_duLich"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFY1gUxhasZkzTnYFLe5Uug4EDyFfWzN6dyvbLFHe-EPGiHtG9p1r6hbPA&s=10"
+            alt="ảnh Đà Nẵng"
+          />
+        </section>
+        <section>
+          <img
+            class="img_duLich"
+            src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/dia-diem-du-lich-o-ha-noi-1.jpg"
+            alt="ảnh Hà Nội"
+          />
+        </section>
+        <section>
+          <img
+            class="img_duLich"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QBGHBZ2CZrnOnQ3oJwo6WQ3t6bm9VimljUP-s8Sjrh4LkHfY_SF_FH4&s=10"
+            alt="ảnh Hạ Long"
+          />
+        </section>
+      </div>
+      <div class="thongTin">
+        <div class="div_thongTin">
+          <div>
+            <p>Điểm đến</p>
+            <input
+              type="text"
+              name=""
+              id="diemDen"
+              placeholder="chọn điểm muốn đến"
+            />
+            <p class="thongBao" id="dDen"></p>
+          </div>
+          <div>
+            <p>Họ và tên</p>
+            <input
+              type="text"
+              name=""
+              id="hoTen"
+              placeholder="Nhập vào họ và tên"
+            />
+            <p class="thongBao" id="hTen"></p>
+          </div>
+        </div>
+        <div class="div_thongTin">
+          <div>
+            <p>Email</p>
+            <input
+              type="email"
+              name=""
+              id="Email"
+              placeholder="Nhập vào email của bạn"
+            />
+            <p class="thongBao" id="email"></p>
+          </div>
+          <div>
+            <p>Ngày đi</p>
+            <input type="date" name="" id="ngayDi" />
+            <p class="thongBao" id="nDI"></p>
+          </div>
+        </div>
+        <div class="div_thongTin">
+          <div>
+            <p>Ngày về</p>
+            <input type="date" name="" id="ngayVe" />
+            <p class="thongBao" id="nVe"></p>
+          </div>
+          <div>
+            <p>Số người</p>
+            <input type="number" name="" id="soNguoi" />
+            <p class="thongBao" id="sNguoi"></p>
+          </div>
+        </div>
+        <div class="div_thongTin">
+          <div>
+            <p>Ghi chú</p>
+            <textarea
+              name=""
+              id=""
+              placeholder="   Yêu cầu ăn kiêng, phòng view, lịch trình riêng..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="can_giua">
+        <button onclick="dangKy()">Đặt Tour</button>
+      </div>
+    </div>
+    <script>
+      function dangKy() {
+        let hopLe = true;
+
+        let diemDen = document.getElementById("diemDen").value;
+        let dDen = document.getElementById("dDen");
+        if (diemDen.length < 2) {
+          dDen.innerHTML = "Bạn phải nhập 2 kí tự !";
+          console.log("Bạn phải nhập vào 2 kí tự");
+          hopLe = false;
+        } else {
+          dDen.innerHTML = "Hợp lệ !";
+          console.log("Hợp lệ !");
+        }
+
+        let hoTen = document.getElementById("hoTen").value;
+        let hTen = document.getElementById("hTen");
+        if (hoTen.length < 7) {
+          hTen.innerHTML = "Bạn phải nhập vào 7 kí tự !";
+          console.log("Bạn phải nhập vào 7 kí tự !");
+          hopLe = false;
+        } else {
+          hTen.innerHTML = "Hợp lệ !";
+        }
+
+        let Email = document.getElementById("Email").value;
+        let email = document.getElementById("email");
+        let emailhl = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailhl.test(Email) == false) {
+          email.innerHTML = "Email nhập vào không hợp lệ !";
+          console.log("Email nhập vào không hợp lệ !");
+          hopLe = false;
+        } else {
+          email.innerHTML = "Hợp lệ !";
+        }
+
+        let ngayDi = document.getElementById("ngayDi").value;
+        let nDi = document.getElementById("nDi");
+
+        let ngayVe = document.getElementById("ngayVe").value;
+        let nVe = document.getElementById("nVe");
+
+        let soNguoi = document.getElementById("soNguoi").value;
+        let sNguoi = document.getElementById("sNguoi");
+
+        if (hopLe == true) {
+          alert("Đặt vé thành công");
+        }
+      }
+    </script>
+  </body>
+</html>

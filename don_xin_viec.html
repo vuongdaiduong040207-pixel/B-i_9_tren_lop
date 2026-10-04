@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đơn xin việc</title>
+    <link rel="stylesheet" href="don_xin_viec.css" />
+  </head>
+  <body>
+    <div class="div_all">
+      <header>
+        <h2>Đơn xin việc</h2>
+        <p class="gray">Nhập thông tin ứng tuyển,CV định dạng PDF</p>
+      </header>
+
+      <div class="can_ngang">
+        <div class="thong_tin">
+          <p class="p_thongtin">Họ tên</p>
+          <input
+            class="input"
+            type="text"
+            placeholder="Nhập vào họ tên"
+            id="hten"
+          />
+          <p class="thongBao" id="hoten"></p>
+        </div>
+
+        <div class="thong_tin">
+          <p class="p_thongtin">Email</p>
+          <input class="input" type="text" placeholder="Email" id="Email" />
+          <p class="thongBao" id="email"></p>
+        </div>
+      </div>
+
+      <div class="can_ngang can_dong">
+        <div class="thong_tin">
+          <p class="p_thongtin pd">Điện thoại</p>
+          <input
+            class="input"
+            type="text"
+            placeholder="0xxxxxxxxx"
+            id="dthoai"
+          />
+          <p class="thongBao" id="dienthoai"></p>
+        </div>
+
+        <div class="thong_tin">
+          <p class="p_thongtin">Giới tính</p>
+          <select name="gioitinh" id="gt">
+            <option>Nam</option>
+            <option>Nữ</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="can_ngang can_dong">
+        <div class="thong_tin">
+          <p class="p_thongtin">Trình độ</p>
+          <select name="" id="tdo">
+            <option value="">Tiểu học</option>
+            <option value="">Trung học</option>
+            <option value="">Cao học</option>
+            <option value="">Cao đẳng</option>
+          </select>
+        </div>
+
+        <div class="thong_tin">
+          <p class="p_thongtin pdk">Kinh nghiệm</p>
+          <input class="input" type="text" placeholder="0-40" id="knghiem" />
+          <p class="thongBao" id="kinhnghiem"></p>
+        </div>
+      </div>
+
+      <div class="can_dong area">
+        <p class="text p_thongtin">Kỹ năng</p>
+        <textarea name="" id="knang"></textarea>
+      </div>
+
+      <div class="can_ngang">
+        <div class="thong_tin">
+          <p class="p p_thongtin">VC (PDF ≤ 5MB)</p>
+          <div class="div_all_inp">
+            <input type="file" id="File" />
+          </div>
+          <p class="p_mini p">Chỉ chọn tệp PDF</p>
+          <p class="thongBao can_tb" id="file"></p>
+        </div>
+      </div>
+
+      <div class="can_ngang div_button">
+        <div>
+          <button onclick="guiHoSo()">Gửi hồ sơ</button>
+        </div>
+
+        <div>
+          <button class="button2">Làm lại</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function guiHoSo() {
+        let hopLe = true;
+
+        let hten = document.getElementById("hten").value;
+        let hoTen = document.getElementById("hoten");
+
+        let Email = document.getElementById("Email").value;
+        let email = document.getElementById("email");
+        let mauEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        let dthoai = document.getElementById("dthoai").value;
+        let dienThoai = document.getElementById("dienthoai");
+        let mauDthoai = /^0\d{9}$/;
+
+        let knghiem = document.getElementById("knghiem").value;
+        let kinhNghiem = document.getElementById("kinhnghiem");
+
+        let knang = document.getElementById("knang").value;
+        let File = document.getElementById("File").files[0];
+        let file = document.getElementById("file");
+
+        if (hten.length < 7) {
+          hoTen.innerHTML = "Phải nhập ít nhất 7 kí tự!";
+          console.log("Bạn phải nhập ít nhất 7 kí tự");
+          hopLe = false;
+        } else {
+          hoTen.innerHTML = "Hợp lệ!";
+          console.log("Hợp lệ!");
+        }
+
+        if (mauEmail.test(Email) == false) {
+          email.innerHTML = "Email không hợp lệ";
+          console.log("Email không hợp lệ!");
+          hopLe = false;
+        } else {
+          email.innerHTML = "Email hợp lệ!";
+          console.log("Email hợp lệ!");
+        }
+
+        if (mauDthoai.test(dthoai) == false) {
+          dienThoai.innerHTML = "Số điện thoại không hợp lệ!";
+          console.log("Số điện thoại không hợp lệ!");
+          hopLe = false;
+        } else {
+          dienThoai.innerHTML = "Hợp lệ!";
+          console.log("Hợp lệ!");
+        }
+
+        let kn = Number(knghiem);
+
+        if (knghiem == "" || kn < 0 || kn > 40) {
+          kinhNghiem.innerHTML = "Không hợp lệ!";
+          console.log("Không hợp lệ!");
+          hopLe = false;
+        } else {
+          kinhNghiem.innerHTML = "Hợp lệ!";
+          console.log("Hợp lệ!");
+        }
+        if (hopLe == true) {
+          alert("Gửi hồ sơ thành công");
+        }
+      }
+    </script>
+  </body>
+</html>

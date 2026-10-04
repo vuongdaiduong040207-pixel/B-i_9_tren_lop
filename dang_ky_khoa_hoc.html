@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký khóa học</title>
+    <link rel="stylesheet" href="dang_ky_khoa_hoc.css" />
+  </head>
+  <body>
+    <div class="div_all1">
+      <div class="div_in_all1">
+        <div>
+          <img
+            class="icon_img"
+            src="https://cdn-icons-png.flaticon.com/128/4218/4218485.png"
+            alt=""
+          />
+        </div>
+        <div class="div_tieuDe">ĐĂNG KÝ KHÓA HỌC</div>
+      </div>
+      <div class="div_in_all2">
+        <a class="ten_kh" href="">HTML & CSS</a>
+        <a class="ten_kh" href="">Java Script</a>
+        <a class="ten_kh" href="">Python</a>
+        <a class="ten_kh" href="">AI/ML</a>
+      </div>
+      <div class="div_all2">
+        <div class="div_in_all3">
+          <div class="div_mini">
+            <p class="p_thongtin">Họ tên <span class="red">*</span></p>
+            <input
+              class="inp1"
+              type="text"
+              placeholder="Nhập vào họ tên"
+              id="hoTen"
+            />
+            <p class="thongBao" id="hTen"></p>
+          </div>
+          <div class="div_mini">
+            <p class="p_thongtin">Email <span class="red">*</span></p>
+            <input
+              class="inp1"
+              type="text"
+              placeholder="Nhập vào địa chỉ email"
+              id="Email"
+            />
+            <p class="thongBao" id="email"></p>
+          </div>
+        </div>
+        <div class="div_in_all3">
+          <div class="div_mini">
+            <p class="p_thongtin">Điện thoại</p>
+            <input
+              class="inp1"
+              type="text"
+              placeholder="Số điện thoại"
+              id="dienThoai"
+            />
+            <p class="thongBao" id="dThoai"></p>
+          </div>
+          <div class="div_mini">
+            <p class="p_thongtin">Cơ sở học</p>
+            <select name="" id="">
+              <option value="">Hà Nội</option>
+              <option value="">Thái Nguyên</option>
+            </select>
+          </div>
+        </div>
+        <div class="div_in_all3">
+          <div class="div_mini">
+            <p class="p_thongtin">Mục tiêu học tập</p>
+            <textarea
+              name=""
+              id=""
+              placeholder="Bạn kì vọng đạt được điều gì sau khóa học?"
+            ></textarea>
+          </div>
+        </div>
+        <div class="div_in_all3">
+          <div class="div_mini impotion">
+            <span class="ghiChu"
+              >Học phí tham khảo:2.500.000đ - 8.000.000đ (tùy khóa)</span
+            >
+          </div>
+        </div>
+        <div class="div_in_all3 center">
+          <div class="div_mini2">
+            <button onclick="dangky()">Đăng ký</button>
+            <button>Làm lại</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function dangky() {
+        let hopLe = true;
+
+        let hoTen = document.getElementById("hoTen").value;
+        let hTen = document.getElementById("hTen");
+
+        if (hoTen.length < 7) {
+          hTen.innerHTML = "Bạn phải nhập đủ 7 kí tự !";
+          console.log("Bạn phải nhập đủ 7 kí tự !");
+          hopLe = false;
+        } else {
+          hTen.innerHTML = "Hợp lệ !";
+          console.log("Hợp lệ !");
+        }
+
+        let Email = document.getElementById("Email").value;
+        let email = document.getElementById("email");
+        let Emailhl = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (Emailhl.test(Email) == false) {
+          email.innerHTML = "Bạn nhập sai định dạng Email !";
+          console.log("Bạn nhập sai định dạng Email !");
+          hopLe = false;
+        } else {
+          email.innerHTML = "Hợp lệ !";
+          console.log("Hợp lệ !");
+        }
+
+        let dienThoai = document.getElementById("dienThoai").value;
+        let dThoai = document.getElementById("dThoai");
+        let dThoaihl = /^0\d{9}$/;
+
+        if (dThoaihl.test(dienThoai) == false) {
+          dThoai.innerHTML = "Số điện thoại nhập vào không hợp lệ !";
+          console.log("Số điện thoại nhập vào không hợp lệ !");
+          hopLe = false;
+        } else {
+          dThoai.innerHTML = "Hợp lệ !";
+          console.log("Hợp lệ !");
+        }
+
+        if (hopLe == true) {
+          alert("Đăng ký thành công");
+        }
+      }
+    </script>
+  </body>
+</html>
