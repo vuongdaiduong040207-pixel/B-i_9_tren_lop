@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt bàn nhà hàng</title>
+    <link rel="stylesheet" href="dat_ban_nha_hang.css" />
+  </head>
+  <body>
+    <div class="div_all">
+      <div class="div_all_hd">
+        <div>
+          <img
+            class="logo1"
+            src="https://cdn-icons-png.flaticon.com/128/1056/1056367.png"
+            alt=""
+          />
+        </div>
+        <div class="hd_mini">ĐẶT BÀN NHÀ HÀNG</div>
+      </div>
+      <p>
+        Khung giờ phục vụ: <b>10:00 - 22:00</b>.Vui lòng chọn khung giờ trong
+        khoảng này
+      </p>
+      <div class="boc">
+        <div class="all_mon_an">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1623/1623786.png"
+              class="icon2"
+              alt=""
+            />
+          </div>
+          <div class="ten_mon">Phở Bò</div>
+        </div>
+        <div class="all_mon_an">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1531/1531385.png"
+              class="icon2"
+              alt=""
+            />
+          </div>
+          <div class="ten_mon">Cơm Tấm</div>
+        </div>
+        <div class="all_mon_an">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2970/2970030.png"
+              class="icon2"
+              alt=""
+            />
+          </div>
+          <div class="ten_mon">Hải Sản</div>
+        </div>
+        <div class="all_mon_an">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/3183/3183463.png"
+              class="icon2"
+              alt=""
+            />
+          </div>
+          <div class="ten_mon">Lẩu Thái</div>
+        </div>
+      </div>
+      <div class="div_all_thongTin">
+        <div class="div_boc_thongTin">
+          <div class="div_thongTin">
+            <p>Họ tên</p>
+            <input
+              class="inp1"
+              id="hoTen"
+              type="text"
+              placeholder="Nhập vào họ và tên"
+            />
+            <p class="thongBao" id="hTen"></p>
+          </div>
+          <div class="div_thongTin">
+            <p>Điện thoại</p>
+            <input
+              class="inp1"
+              id="dienThoai"
+              type="text"
+              placeholder="0xxxxxxxxx"
+            />
+            <p class="thongBao" id="dThoai"></p>
+          </div>
+        </div>
+        <div class="div_boc_thongTin">
+          <div class="div_thongTin">
+            <p>Ngày</p>
+            <input class="inp1" id="Ngay" type="date" />
+          </div>
+          <div class="div_thongTin">
+            <p>Giờ</p>
+            <input class="inp1" id="Gio" type="time" />
+          </div>
+        </div>
+        <div class="div_boc_thongTin">
+          <div class="div_thongTin">
+            <p>Số khách</p>
+            <input class="inp1" id="soKhach" type="number" />
+          </div>
+          <div class="div_thongTin">
+            <p>Vị trí bàn</p>
+            <select
+              class="slt"
+              id="hoTen"
+              type="text"
+              placeholder="Nhập vào họ và tên"
+            >
+              <option value="">Bàn 1</option>
+              <option value="">Bàn 2</option>
+              <option value="">Bàn 3</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <button onclick="datBan()">Đặt bàn</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function datBan() {
+        let hopLe = true;
+
+        let hoTen = document.getElementById("hoTen").value;
+        let hTen = document.getElementById("hTen");
+        if (hoTen.length < 7) {
+          hTen.innerHTML = "Bạn phải nhập ít nhất 7 kí tự !";
+          console.log("Bạn phải nhập ít nhất 7 kí tự !");
+          hopLe = false;
+        } else {
+          hTen.innerHTML = "Hợp lệ !";
+        }
+
+        let dienThoai = document.getElementById("dienThoai").value;
+        let dThoai = document.getElementById("dThoai");
+        let dthl = /^0\d{9}$/;
+        if (dthl.test(dienThoai) == false) {
+          dThoai.innerHTML = "Số điện thoại nhập vào không hợp lệ !";
+          console.log("Số điện thoại nhập vào không hợp lệ !");
+          hopLe = false;
+        } else {
+          dThoai.innerHTML = "Hợp lệ !";
+          console.log("Hợp lệ !");
+        }
+
+        if (hopLe == true) {
+          alert("Đặt bàn thành công !");
+          console.log("Đặt bàn thành công !");
+        }
+      }
+    </script>
+  </body>
+</html>

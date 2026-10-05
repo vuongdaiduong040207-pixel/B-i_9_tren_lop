@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập số a</title>
+  </head>
+  <body>
+    <h1>Form Nhập số a</h1>
+    <p>Số a:</p>
+    <input
+      type="text"
+      name=""
+      id="soA"
+      placeholder="Nhập số a"
+      style="width: 500px; height: 40px; border-radius: 15px; border: 2px solid gray;"
+    />
+    <p>Kết quả: <span style="color: red" id="ketQua"></span></p>
+    <input
+      style="
+        font-size: 20px;
+        border-radius: 10px;
+        background: rgb(78, 198, 250);
+      "
+      type="submit"
+      onclick="kq()"
+    /><input style="font-size: 20px; border-radius: 10px" type="reset" />
+    <script>
+      function kq() {
+        let hopLe = true;
+        let a = document.getElementById("soA").value;
+        let ketQua = Math.pow(a, 5);
+        let kq = document.getElementById("ketQua");
+
+        if (a == "" || isNaN(a)) {
+          kq.innerHTML = "Bạn phải nhập vào ít nhất 1 số !";
+          console.log("Bạn phải nhập vào ít nhất     1 số !");
+          hopLe = false;
+        } else {
+          kq.innerHTML = ketQua;
+        }
+      }
+    </script>
+  </body>
+</html>

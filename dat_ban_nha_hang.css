@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.div_all {
+  margin: auto;
+  justify-content: center;
+  width: 700px;
+  border: 1px solid #e0f2fe;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 20px;
+  background-color: pink;
+}
+.div_all_hd {
+  display: flex;
+  justify-content: center;
+}
+.hd_mini {
+  margin-top: 2px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.logo1 {
+  width: 40px;
+}
+.icon2 {
+  width: 20px;
+}
+.boc {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 230, 184);
+  margin: 10px;
+  border: 1px solid rgb(255, 203, 108);
+  border-radius: 20px;
+}
+.all_mon_an {
+  display: flex;
+  border: 1px solid rgb(254, 188, 65);
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+.all_mon_an:hover {
+  background-color: rgb(239, 174, 82);
+}
+.ten_mon {
+  margin-top: 3px;
+  font-weight: bold;
+}
+.bold {
+  text-align: left;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.inp1 {
+  width: 270px;
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 13px;
+  margin: 0 0 10px 15px;
+}
+.thongBao {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+}
+.div_all_thongTin {
+  border: 5px dashed rgb(255, 150, 168);
+  border-radius: 10px;
+  margin: 20px;
+  background-color: white;
+}
+.div_boc_thongTin {
+  display: flex;
+  text-align: left;
+  margin-top: 20px;
+}
+.div_thongTin {
+  width: 50%;
+  padding-left: 15px;
+}
+.div_thongTin > p {
+  margin: 0 0px 5px 20px;
+  padding: 0;
+  font-size: 12;
+  font-weight: bold;
+  text-align: left;
+}
+button {
+  padding: 5px 10px;
+  font-size: 25px;
+  background-color: rgb(109, 109, 230);
+  border-radius: 15px;
+  margin: 20px 0px 15px 0px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: green;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+button:active {
+  background-color: navy;
+  color: white;
+}
+.slt {
+  width: 273px;
+  height: 38px;
+  margin-left: 15px;
+  border: 1px solid gray;
+  border-radius: 13px;
+}
