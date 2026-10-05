@@ -1,110 +1,109 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #cfcfcf;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfcfcf;
 }
-.div_all{
-    text-align: center;
-    margin: auto;
-    width: 570px;
-    border: 1px solid blue;
-    height: 620px;
-    border-radius: 10px;
-    background-color: rgb(214, 241, 255);
+.div_all {
+  text-align: center;
+  margin: auto;
+  width: 570px;
+  border: 1px solid blue;
+  height: 620px;
+  border-radius: 10px;
+  background-color: rgb(214, 241, 255);
 }
-.gray{
-    text-align: center;
-    color: gray;
-    font-size: 12px;
+.gray {
+  text-align: center;
+  color: gray;
+  font-size: 12px;
 }
-.can_ngang{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+.can_ngang {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
-.thong_tin{
-    width: 250px;
-    height: 40px;
+.thong_tin {
+  width: 250px;
+  height: 40px;
 }
-.input{
-    width: 200px;
-    height: 30px;
-    border-radius: 8px;
-    border: solid 2px gray;
+.input {
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 2px gray;
 }
-.p_thongtin{
-    padding-right: 140px;
-    margin-bottom: 0px;
-    font-weight: bold;
+.p_thongtin {
+  padding-right: 140px;
+  margin-bottom: 0px;
+  font-weight: bold;
 }
-.can_dong{
-    margin-top: 40px;
+.can_dong {
+  margin-top: 40px;
 }
-select{
-    width: 208px;
-    height: 36px;
-    border: 2px solid gray;
-    border-radius: 8px;
+select {
+  width: 208px;
+  height: 36px;
+  border: 2px solid gray;
+  border-radius: 8px;
 }
-.area{
-    margin-top: 50px;
+.area {
+  margin-top: 50px;
 }
-textarea{
-    width: 500px;
-    height: 70px;
-    border: 1px solid gray;
-    border-radius: 8px;
+textarea {
+  width: 500px;
+  height: 70px;
+  border: 1px solid gray;
+  border-radius: 8px;
 }
-.text{
-    padding-right: 430px;
+.text {
+  padding-right: 430px;
 }
-.p{
-    display: flex;
-    margin-left: -125px;
+.p {
+  display: flex;
+  margin-left: -125px;
 }
-.div_all_inp{
-    padding-right: 150px;
+.div_all_inp {
+  padding-right: 150px;
 }
-.div_all_inp>input{
-    margin-right: 150px;
-    margin-left: -125px;
-    margin-top: 10px;
-    font-size: 20px;
+.div_all_inp > input {
+  margin-right: 150px;
+  margin-left: -125px;
+  margin-top: 10px;
+  font-size: 20px;
 }
-.p_mini{
-    color: gray;
-    font-size: 12px;
+.p_mini {
+  color: gray;
+  font-size: 12px;
 }
-.div_button{
-    margin-top: 80px;
-    display: flex;
+.div_button {
+  margin-top: 80px;
+  display: flex;
 }
-button{
-    font-size: 20px;
-    border-radius: 9px;
-    padding: 5px 10px;
-    background-color: navy;
-    color: white;
+button {
+  font-size: 20px;
+  border-radius: 9px;
+  padding: 5px 10px;
+  background-color: navy;
+  color: white;
 }
-.button2{
-    background-color: gray;
-    margin-right: 10px;
+.button2 {
+  background-color: gray;
+  margin-right: 10px;
 }
-.thongBao{
-    color: red;
-    font-size: 13px;
-    margin-top: 2px;
-    padding-right: 0px;
-    font-weight: bold;
+.thongBao {
+  color: red;
+  font-size: 13px;
+  margin-top: 2px;
+  padding-right: 0px;
+  font-weight: bold;
 }
-.pdk{
-    padding-left: 15px;
-    padding-right: 120px;
-    
+.pdk {
+  padding-left: 15px;
+  padding-right: 120px;
 }
-.pd{
-    padding-left: 25px;
+.pd {
+  padding-left: 25px;
 }
-.can_tb{
-    margin-top: -10px;
-    margin-left: -335px;
+.can_tb {
+  margin-top: -10px;
+  margin-left: -335px;
 }
